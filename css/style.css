@@ -1,0 +1,353 @@
+/* color Palette Variables */
+:root {
+    --morning-glory: #a8e3d9;
+    --science-blue: #0062e5;
+    --standout-purple: #8a91df;
+    --regent-st-blue: #a9cfe4;
+    --gray-chateau: #a3a9ab;
+    --white: #ffffff;
+    --off-white: #e7e9fc;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--off-white);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Branding & Nav */
+header {
+    background-color: var(--science-blue);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-logo {
+    padding-left: 0;
+    margin-left: 15px;
+    /* Aligned to the far left border */
+    font-size: 1.6rem;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.header-logo a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.header-logo a:visited {
+    color: var(--white);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+    margin-right: 20px;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--white);
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+nav a:visited {
+    color: var(--white);
+}
+
+nav a:hover,
+nav a.active {
+    background-color: var(--standout-purple);
+    color: var(--white);
+}
+
+/* Main Content Layout */
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    min-height: 75vh;
+}
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 40px;
+}
+
+/* Desktop Grid Logic */
+@media (min-width: 992px) {
+    .page-content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .content-left {
+        flex: 1.5;
+    }
+
+    .content-right {
+        flex: 1;
+    }
+}
+
+/* Components & Widgets */
+.weather-widget {
+    background: var(--regent-st-blue);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--science-blue);
+}
+
+.gallery-square {
+    background: var(--white);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+}
+
+.gallery-square img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Buttons */
+.standout-btn {
+    background-color: var(--standout-purple);
+    color: var(--white);
+    border: none;
+    padding: 16px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.standout-btn:hover {
+    background-color: #7a81cf;
+    transform: translateY(-2px);
+}
+
+.vertical-btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 250px;
+}
+
+/* Map Mockups */
+.map-box {
+    background-color: #e0e0e0;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 2px dashed var(--gray-chateau);
+    color: #666;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Lodging & Lists */
+.lodging-card {
+    background: var(--white);
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border-left: 4px solid var(--science-blue);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.attraction-list,
+.restaurant-list {
+    padding-left: 20px;
+}
+
+.attraction-list li {
+    margin-bottom: 10px;
+}
+
+/* Forms & Chat */
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid var(--gray-chateau);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#chat-window {
+    height: 300px;
+    background: #f0f0f0;
+    border-radius: 8px;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.msg {
+    padding: 10px 14px;
+    border-radius: 15px;
+    max-width: 85%;
+    font-size: 0.95rem;
+}
+
+.bot {
+    background: var(--morning-glory);
+    align-self: flex-start;
+}
+
+.user {
+    background: var(--science-blue);
+    color: var(--white);
+    align-self: flex-end;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--gray-chateau);
+    color: var(--white);
+    padding: 20px 20px;
+    margin-top: 40px;
+}
+
+.footer-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    text-align: center;
+}
+
+.footer-grid h4 {
+    margin: 0 0 8px 0;
+    font-size: 0.95rem;
+}
+
+.footer-grid p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a i {
+    font-size: 1.3rem;
+    transition: transform 0.3s, color 0.3s;
+}
+
+footer a i:hover {
+    transform: scale(1.2);
+}
+
+footer a:hover {
+    color: var(--morning-glory);
+}
+
+.carousel {
+    background: var(--white);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.carousel-slides {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.carousel-slides .slide {
+    display: none;
+}
+
+.carousel-slides .slide.active {
+    display: block;
+}
+
+.carousel-slides img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.carousel-btn {
+    background-color: var(--science-blue);
+    color: var(--white);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background 0.3s;
+    flex-shrink: 0;
+}
+
+.carousel-btn:hover {
+    background-color: var(--standout-purple);
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--gray-chateau);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    background-color: var(--science-blue);
+}
