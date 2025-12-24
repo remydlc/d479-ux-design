@@ -33,15 +33,17 @@
         </div>
         <div class="content-right">
             <h2>Contact a Tainitian</h2>
-            <form>
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <textarea rows="4" placeholder="Your Question..."></textarea>
+            <div id="form-message" style="display: none; margin-bottom: 15px; padding: 12px; background-color: #4CAF50; color: white; border-radius: 4px; text-align: center;">Thank you for your message! We'll be in touch soon.</div>
+            <form id="contact-form">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea rows="4" placeholder="Your Question..." required></textarea>
                 <button type="submit" class="standout-btn">Submit Form</button>
             </form>
         </div>
     </main>
     <script src="js/chat.js"></script>
+    <script src="js/contact-form.js"></script>
     <footer>
         <div class="footer-grid">
             <div>
