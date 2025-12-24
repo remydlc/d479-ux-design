@@ -7,6 +7,7 @@
     <title>Book Your Stay - Taniti</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/carousel.js"></script>
 </head>
 
 <body>
@@ -29,6 +30,7 @@
             style="display: flex; align-items: flex-start; gap: 30px; justify-content: center; width: 100%;">
             <div class="lodging-results" style="flex: 1;">
                 <h1>Taniti Island Lodging</h1>
+                <p style="color: #666; margin: 10px 0;">Select your check-in date below to view available accommodations:</p>
                 <input type="date" id="checkInDate">
                 <div class="lodging-card"><strong>Hotel California</strong><br>123 Sunset Blvd | $150-$450/night</div>
                 <div class="lodging-card"><strong>Hotel Phyatt</strong><br>45 Blue Bay Lane | $200-$600/night</div>
@@ -37,11 +39,31 @@
                 </p>
             </div>
             <div class="content-right">
-            <div class="gallery-square">
-                <h3>📍Lodging Map</h3>
-                <img src="images/citymap.png" alt="Hotel Maps">
-            </div>
 
+            <div class="content-right">
+                <div class="carousel">
+                    <div class="carousel-container">
+                        <button class="carousel-btn prev">❮</button>
+                        <div class="carousel-slides">
+                            <div class="slide">
+                                <img src="images/hotel1.png" alt="A hotel">
+                            </div>
+                            <div class="slide">
+                                <img src="images/hotel2.png" alt="Another hotel">
+                            </div>
+                            <div class="slide">
+                                <img src="images/hotel3.png" alt="Another hotel">
+                            </div>
+                        </div>
+                        <button class="carousel-btn next">❯</button>
+                    </div>
+                    <div class="carousel-dots"></div>
+                </div>
+                            <div class="gallery-square">
+                                <h3>📍Lodging Map</h3>
+                                <img src="images/citymap.png" alt="Hotel Maps">
+                            </div>
+            </div>
         </div>
         </div>
     </main>
@@ -67,7 +89,10 @@
         </div>
     </footer>
 
+    <script src="js/carousel.js"></script>
     <script>
+
+        
         // Set date picker default to today's date
         const today = new Date().toISOString().split('T')[0];
         document.getElementById('checkInDate').value = today;

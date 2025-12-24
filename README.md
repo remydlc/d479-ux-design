@@ -68,4 +68,5 @@ food https://www.tripadvisor.com/Restaurant_Review-g297570-d25566732-Reviews-Le_
 taxi https://img.freepik.com/premium-photo/yellow-taxi-car_849973-5261.jpg
 bike https://thumbs.dreamstime.com/b/mountain-bike-over-sea-mountains-blue-sky-rocky-beach-mountain-bike-over-sea-mountains-blue-sky-rocky-beach-115882578.jpg
 bus https://img.freepik.com/premium-photo/poster-beach-scene-with-bus-it_1108314-315188.jpg
+hotels: duckduckgo.com image search
 ```
