@@ -29,7 +29,7 @@
             style="display: flex; align-items: flex-start; gap: 30px; justify-content: center; width: 100%;">
             <div class="lodging-results" style="flex: 1;">
                 <h1>Taniti Island Lodging</h1>
-                <input type="date">
+                <input type="date" id="checkInDate">
                 <div class="lodging-card"><strong>Hotel California</strong><br>123 Sunset Blvd | $150-$450/night</div>
                 <div class="lodging-card"><strong>Hotel Phyatt</strong><br>45 Blue Bay Lane | $200-$600/night</div>
                 <div class="lodging-card"><strong>Hotel Tariot</strong><br>88 Volcano Rd | $50-$300/night</div>
@@ -66,6 +66,12 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Set date picker default to today's date
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('checkInDate').value = today;
+    </script>
 </body>
 
 </html>
